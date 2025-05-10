@@ -208,6 +208,8 @@ class LuxMedSniper:
             "searchDatePreset": lookup_days,
             "delocalized": "false",
         }
+        if 'referralId' in doctor_locator: params["referralId"] = doctor_locator['referralId']
+        if 'lookup_time_days' in doctor_locator: params["lookup_time_days"] = doctor_locator['lookup_time_days']
         if clinic_ids:
             params["facilitiesIds"] = clinic_ids
         if doctor_ids:
